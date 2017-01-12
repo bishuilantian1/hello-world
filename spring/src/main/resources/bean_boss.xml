@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans
+    xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	 http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+	 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	">
+	
+	<context:component-scan base-package="cn.dan.spring.demo" resource-pattern="operation/*.class"></context:component-scan>
+	
+	<bean id="boss" class="cn.dan.spring.demo.model.Boss">
+		<property name="favorities">
+			<list>
+				<value>电影</value>
+				<value>美食</value>
+				<value>运动</value>
+				<value>购物</value>
+			</list>
+		</property>
+		<property name="jobs">
+			<map>
+				<entry>
+					<key><value>1</value></key>
+					<value>wo</value>
+				</entry>
+				<entry>
+					<key><value>2</value></key>
+					<value>ai</value>
+				</entry>
+				<entry>
+					<key><value>3</value></key>
+					<value>ni</value>
+				</entry>
+				<entry>
+					<key><value>4</value></key>
+					<ref bean="car"/>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="car" class="cn.dan.spring.demo.model.Car">
+		<property name="brand"><value>宝马</value></property>
+		<property name="color"><value>黑色</value></property>
+		<property name="maxSpeed"><value>400</value></property>
+	</bean>
+	
+	<util:list id="mylists">
+		<value>1</value>
+		<value>2</value>
+		<value>3</value>
+		<value>4</value>
+		<value>5</value>
+	</util:list>
+	
+	<bean id="bossList" class="cn.dan.spring.demo.model.BossListImpl">
+		<property name="list">
+			<list>
+				<value>a</value>
+				<value>b</value>
+				<value>c</value>
+				<value>d</value>
+				<value>e</value>
+			</list>
+		</property>
+	</bean>
+	
+</beans>
