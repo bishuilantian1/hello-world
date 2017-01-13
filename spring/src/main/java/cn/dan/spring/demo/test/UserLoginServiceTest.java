@@ -9,14 +9,6 @@ import org.springframework.core.io.Resource;
 import cn.dan.spring.demo.service.UserLoginService;
 
 
-/**
- * ClassName:cn.dan.spring.demo.test.UserLoginServiceTest <br/>
- * 描述: TODO  <br/>
- * 日期:     2017年1月11日 <br/>
- * @author   muerdan
- * @version  
- * @since    1.0
- */
 public class UserLoginServiceTest {
     
     @Autowired

@@ -7,15 +7,7 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-/**
- * 
- * ClassName:cn.dan.spring.demo.Car <br/>
- * ÃèÊö: TODO  <br/>
- * ÈÕÆÚ:     2017Äê1ÔÂ10ÈÕ <br/>
- * @author   muerdan
- * @version  
- * @since    1.0
- */
+
 public class Car implements BeanFactoryAware,BeanNameAware,InitializingBean,DisposableBean{
 
     private String brand;
@@ -28,42 +20,42 @@ public class Car implements BeanFactoryAware,BeanNameAware,InitializingBean,Disp
     
     
     public Car() {
-        System.out.println("µ÷ÓÃcar()¹¹Ôìº¯Êý¡£");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½car()ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½");
     }
 
 
     public String getBrand() {
-        System.out.println("µ÷ÓÃcarµÄgetBrand£¨£©·½·¨");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½carï¿½ï¿½getBrandï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         return brand;
     }
 
     
     public void setBrand(String brand) {
-        System.out.println("µ÷ÓÃcarµÄsetBrand£¨£©·½·¨");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½carï¿½ï¿½setBrandï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         this.brand = brand;
     }
 
     
     public String getColor() {
-        System.out.println("µ÷ÓÃcarµÄgetColor£¨£©·½·¨");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½carï¿½ï¿½getColorï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         return color;
     }
 
     
     public void setColor(String color) {
-        System.out.println("µ÷ÓÃcarµÄsetColor£¨£©·½·¨");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½carï¿½ï¿½setColorï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         this.color = color;
     }
 
     
     public int getMaxSpeed() {
-        System.out.println("µ÷ÓÃcarµÄgetMaxSpeed£¨£©·½·¨");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½carï¿½ï¿½getMaxSpeedï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         return maxSpeed;
     }
 
     
     public void setMaxSpeed(int maxSpeed) {
-        System.out.println("µ÷ÓÃcarµÄsetMaxSpeed£¨£©·½·¨");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½carï¿½ï¿½setMaxSpeedï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         this.maxSpeed = maxSpeed;
     }
     
@@ -83,31 +75,31 @@ public class Car implements BeanFactoryAware,BeanNameAware,InitializingBean,Disp
 
 
     public void destroy() throws Exception {
-       System.out.println("µ÷ÓÃDisposableBean.destory().");
+       System.out.println("ï¿½ï¿½ï¿½ï¿½DisposableBean.destory().");
     }
 
     public void afterPropertiesSet() throws Exception {
-        System.out.println("µ÷ÓÃInitializalizingBean.afterPropertiesSet().");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½InitializalizingBean.afterPropertiesSet().");
     }
 
     public void setBeanName(String beanName) {
-       System.out.println("µ÷ÓÃBeanNameWare.setBeanName().");
+       System.out.println("ï¿½ï¿½ï¿½ï¿½BeanNameWare.setBeanName().");
        this.beanName=beanName;
         
     }
 
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
-        System.out.println("µ÷ÓÃBeanFactoryAware.setBeanFactory().");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½BeanFactoryAware.setBeanFactory().");
         this.beanFactory=beanFactory;
     }
     
     public void myInit(){
-        System.out.println("µ÷¶¯init-methodËùÖ¸¶¨µÄmyInit(),½«maxSpeedÉèÖÃÎª240");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½init-methodï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½myInit(),ï¿½ï¿½maxSpeedï¿½ï¿½ï¿½ï¿½Îª240");
         this.maxSpeed=240;
     }
     
     public void myDestroy(){
-        System.out.println("µ÷ÓÃdestory-methodÖ¸¶¨µÄmyDestroy().");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½destory-methodÖ¸ï¿½ï¿½ï¿½ï¿½myDestroy().");
     }
 
 
